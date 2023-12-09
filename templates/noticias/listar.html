@@ -3,4 +3,11 @@
 {% block titulo %}Noticias{% endblock titulo%}
 {% block contenido %}
     <h2>Aca estan las noticias</h2>
+    {% for noticia in noticias %}
+    <p>{{noticia.titulo}}</p>
+    <p>{{noticia.categoria_noticia}}</p>
+    <p>{{noticia.contenido}}</p>
+    <img src="{{noticia.imagenes.url}}" width="30%">
+    <p>{{noticia.fecha_publicacion}}</p>
+    {% endfor %}
 {% endblock contenido %} 
