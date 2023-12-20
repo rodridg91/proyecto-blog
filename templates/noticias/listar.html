@@ -3,11 +3,21 @@
 {% block titulo %}Noticias{% endblock titulo%}
 {% block contenido %}
     <h2>Aca estan las noticias</h2>
+    <div class="submenu">
+        <a href="{% url 'noticias:listar' %}">TODAS</a>
+        {% for cat in categorias %}
+            <a href="?id={{cat.pk}}">{{cat.nombre}}</a>
+        {% endfor %}
+        <a href="?antiguedad_asc=1">Mas antiguas primero</a>
+        <a href="?antiguedad_desc=1">Mas recientes primero</a>
+        <a href="?titulo_asc=1">A-Z</a>
+        <a href="?titulo_desc=1">Z-A</a>
+    </div>
     {% for noticia in noticias %}
-    <p>{{noticia.titulo}}</p>
-    <p>{{noticia.categoria_noticia}}</p>
-    <p>{{noticia.contenido}}</p>
-    <img src="{{noticia.imagenes.url}}" width="30%">
-    <p>{{noticia.fecha_publicacion}}</p>
+    <a href="{% url 'noticias:detalle' noticia.id%}">{{noticia.titulo}}</a>
+    <br>
+    <img src="{{noticia.imagenes.url}}" width="10%">
+    <br>
+    <br>
     {% endfor %}
 {% endblock contenido %} 

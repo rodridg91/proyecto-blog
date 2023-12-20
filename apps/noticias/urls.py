@@ -21,4 +21,5 @@ from . import views
 app_name = 'noticias'
 urlpatterns = [
     path('', views.ListarNoticias, name='listar'),
+    path('detalle/<int:id>', views.DetalleNoticia, name='detalle'),
 ]
