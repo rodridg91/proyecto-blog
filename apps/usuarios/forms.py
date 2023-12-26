@@ -10,6 +10,7 @@ class RegistroForm(UserCreationForm):
     username = forms.CharField(label="Nombre de Usuario",required=True)
     password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput, required=True)
     password2 = forms.CharField(label="Confirmar Contraseña", widget=forms.PasswordInput, required=True)
+    imagen = forms.ImageField(label='Imagen de perfil', required=False)
 
     class Meta:
         model = Usuario
@@ -19,5 +20,6 @@ class RegistroForm(UserCreationForm):
             'username',
             'email',
             'password1',
-            'password2',        
+            'password2',
+            'imagen'        
         ]

@@ -111,7 +111,7 @@ def BorrarComentario(request, comentario_id):
 
 @login_required
 def EditarNoticia(request, pk):
-    noticia = get_object_or_404(Noticia, id=id)
+    noticia = get_object_or_404(Noticia, id=pk)
 
 
     # Solo el autor puede editar la noticia
@@ -123,7 +123,7 @@ def EditarNoticia(request, pk):
         form = NoticiaForm(request.POST, request.FILES, instance=noticia)
         if form.is_valid():
             form.save()
-            return redirect('noticias:detalle', id=id)
+            return redirect('noticias:detalle', id=pk)
     else:
         form = NoticiaForm(instance=noticia)
 
