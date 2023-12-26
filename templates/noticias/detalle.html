@@ -8,8 +8,9 @@
     <p>{{noticias.contenido}}</p>
     <img src="{{noticias.imagenes.url}}" width="25%">
     <p>{{noticias.fecha_publicacion}}</p>
-    <p>Autor: {{noticias.autor}}</p>
+    <p>Autor: {{noticias.autor}}</p>        
     {% if user.is_authenticated and noticia.autor == user or user.is_staff %}
+    <a href="{% url 'noticias:edit_noticia' pk=noticias.pk %}">Editar</a>
         <form method="POST" action="{% url 'noticias:detalle' id=noticias.id %}">
             {% csrf_token %}
             <button type="submit" name="delete_noticia">BORRAR</button>
@@ -38,7 +39,7 @@
             </form>
         {% else %}
             <p>Debe iniciar sesión para dejar un comentario</p>
-            <a href="{% url 'login' %}">INICIAR SESION</a>
+            <a href="{% url 'usuarios:login' %}">INICIAR SESION</a>
         {% endif %}
         <a href="{% url 'noticias:listar' %}">VOLVER</a>
 

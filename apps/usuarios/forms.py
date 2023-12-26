@@ -8,16 +8,16 @@ class RegistroForm(UserCreationForm):
     first_name = forms.CharField(label="Nombre",required=True)
     last_name = forms.CharField(label="Apellido",required=True)
     username = forms.CharField(label="Nombre de Usuario",required=True)
-    password = forms.CharField(label="Contraseña", widget=forms.PasswordInput, required=True)
+    password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput, required=True)
     password2 = forms.CharField(label="Confirmar Contraseña", widget=forms.PasswordInput, required=True)
 
-class Meta:
-    model = Usuario
-    fields = [
-        'first_name',
-        'last_name',
-        'username',
-        'email',
-        'password1',
-        'password2',        
-    ]
+    class Meta:
+        model = Usuario
+        fields = [
+            'first_name',
+            'last_name',
+            'username',
+            'email',
+            'password1',
+            'password2',        
+        ]

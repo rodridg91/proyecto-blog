@@ -25,13 +25,13 @@ def user_login(request):
 
 def user_logout(request):
     logout(request)
-    return render(request, 'usuarios/login.html')
+    return render(request, 'home.html')
 
 #Registro de usuarios
 
 class Registro(CreateView):
     #formulario de registro
     form_class = RegistroForm
-    success_url = reverse_lazy('login')
+    success_url = reverse_lazy('usuarios:login')
     template_name = 'usuarios/registro.html'
     
