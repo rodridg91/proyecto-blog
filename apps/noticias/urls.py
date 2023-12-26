@@ -22,4 +22,9 @@ app_name = 'noticias'
 urlpatterns = [
     path('', views.ListarNoticias, name='listar'),
     path('detalle/<int:id>', views.DetalleNoticia, name='detalle'),
+    path('addNoticia', views.AddNoticia, name='addnoticia'),
+    path('comentario/add/<int:noticia_id>', views.AddComentario, name='add_comentario'),
+    path('comentario/delete/<int:comentario_id>', views.BorrarComentario, name='delete_comentario'),
+    path('noticias/<int:pk>/edit/', views.EditarNoticia, name='edit_noticia'),
+    path('comentario/edit/<int:comentario_id>', views.EditarComentario, name='edit_comentario'),
 ]
