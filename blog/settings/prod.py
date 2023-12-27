@@ -13,7 +13,7 @@ DATABASES = {
         'NAME': 'blog_comision6',
         'USER':'rodridg91',
         'PASSWORD':'rootroot',
-        'HOST': 'localhost',
+        'HOST': 'rodridg91.mysql.pythonanywhere-services.com',
         'PORT':''
     }
 }

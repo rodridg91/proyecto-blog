@@ -27,7 +27,7 @@ AUTH_USER_MODEL = 'usuarios.Usuario'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [rodridg91.mysql.pythonanywhere-services.com]
+ALLOWED_HOSTS = ['rodridg91.pythonanywhere.com']
 
 
 # Application definition
