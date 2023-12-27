@@ -24,7 +24,9 @@ SECRET_KEY = 'django-insecure-ofgq85j6ipebwrh)kq0caf8_g5e9un^uv(+o@akb9%0aoqaze@
 
 AUTH_USER_MODEL = 'usuarios.Usuario'
 
+DEBUG = False
 
+ALLOWED_HOSTS = ['rodridg91.pythonanywhere.com']
 
 
 # Application definition
