@@ -12,7 +12,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog_comision6',
         'USER':'rodridg91',
-        'PASSWORD':'rootroot',
+        'PASSWORD':'info2023',
         'HOST': 'rodridg91.mysql.pythonanywhere-services.com',
         'PORT':''
     }
